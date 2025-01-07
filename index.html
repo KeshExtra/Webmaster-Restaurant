@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Webmaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+</head>
+<body>
+    <script>
+       
+        window.addEventListener('load', () => {
+            const sliders = document.querySelector('.sliders');
+    
+            const cloneSlides = () => {
+                const slides = Array.from(sliders.children);
+                slides.forEach(slide => {
+                    const clone = slide.cloneNode(true);
+                    sliders.appendChild(clone);
+                });
+            };
+    
+           
+            const pauseSlider = () => {
+                sliders.style.animationPlayState = 'paused';
+            };
+    
+            const resumeSlider = () => {
+                sliders.style.animationPlayState = 'running';
+            };
+    
+            
+            const initializeSlider = () => {
+                cloneSlides();
+                sliders.style.animation = 'slide 20s linear infinite';
+                sliders.addEventListener('mouseover', pauseSlider);
+                sliders.addEventListener('mouseout', resumeSlider);
+            };
+    
+            initializeSlider();
+        });
+    </script>
+     <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-bar">
+            <li id="logo">
+                <img src="Palette de dieu.png" id="logo-img">
+            </li>
+            <a href="menu.html"><li class="option">
+               <p>Menu</p></a>
+            </li>
+            <li class="option">
+              <a href="legacy.html"><p>Legacy</p></a>
+            </li>
+            <li class="option" id="second-last-option">
+                <a href="reference.html"><p>Reference Page</p></a>
+            </li>
+            <li class="option" id="last-option">
+               <a href="login.html"><p>Sign In</p></a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Welcome Top Part -->
+    <section id="top" class="slideshow">
+        <div id="welcome">
+            <p class="title">
+                Welcome To
+            </p>
+            <img src = "Palette de dieu.png" id="welcome-logo">
+        </div>
+    </section>
+
+    <!-- Sliding Reviews Part -->
+    <p class="title" id="reviews-text">
+        Average Rating<span style="display: block; margin-top:2%;">4.75/5</span>
+    </p>
+    <section id="sliding-testimonial">
+        <div class="sliders">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+            <img src="Add a little bit of body text.png" class = "review">
+        </div>
+    </section>
+
+    <!-- Mission Part -->
+    <section id="mission-section">
+        <p class="title">
+            Our Mission
+        </p>
+        <div id="mission-content">
+            <div id="mission-images">
+                <!-- <img class="mission-content-image" src="vecteezy_ai-generated-creamy-chicken-alfredo-pasta-bow-on-transparent_36498052.png"> -->
+                <!-- <img src="vecteezy_ai-generated-pork-teriyaki-japanese-food-on-a-transparent_36512714.png" class="mission-content-image">-->
+                <img src="vecteezy_food-food-salad-sarah-vegetables_25107390.png" class="mission-content-image"> 
+            </div>
+            <div id="mission-text">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis hic molestias dignissimos esse molestiae odio accusantium quo nemo sapiente, repudiandae quibusdam officiis alias vitae modi ratione consequatur repellendus accusamus sunt libero voluptatum voluptate tempora velit. Ex repudiandae aliquam ea assumenda necessitatibus, quisquam et iure officia quo voluptate natus quia at excepturi nobis, autem numquam, cumque non delectus animi debitis officiis itaque adipisci? Molestiae inventore excepturi voluptatum vitae iste ut aut repudiandae corporis distinctio sunt, autem consequatur minus nam facere iure officiis. Quidem dignissimos doloremque pariatur, porro quo in deserunt, quod voluptatibus commodi asperiores ipsam repellendus eveniet est cumque repudiandae accusantium, nihil maiores error? Alias voluptatibus est voluptatem quod suscipit deleniti consequuntur eum saepe quam rerum. Rem, illo accusantium. Tenetur fuga recusandae totam alias. Quos omnis adipisci in, aperiam odio corrupti id fugiat ratione? Doloribus in fuga, deleniti at omnis ad necessitatibus, quis suscipit reiciendis culpa perspiciatis a. Autem tempora, voluptate atque maxime recusandae voluptatibus adipisci quia blanditiis quaerat nesciunt aliquam enim, maiores ipsum harum ex laborum explicabo odio quo eaque, cum praesentium excepturi sapiente mollitia delectus. Necessitatibus ea ratione neque nihil iusto incidunt esse, asperiores harum, corrupti aliquid non corporis nam a eius similique! Ad numquam quis nulla fugit.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- <footer>
+       <ul>
+            <li>Address</li>
+            <li>
+            </li>
+        </ul>
+    </footer> -->
+    <!-- <section id="resourcing-section">
+        <div class="display-card" id="resourcing-method">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, debitis quis. Repellendus tenetur blanditiis porro. Quidem delectus quam accusantium tempora excepturi provident at ut molestiae consequatur voluptatum reiciendis, repellat natus officiis maiores iure. Error facilis omnis dolorum iste sed ab eaque obcaecati at quaerat magnam. Adipisci id vero porro placeat sint voluptatibus minima aliquid eos debitis cupiditate autem, est, aspernatur excepturi unde dolor assumenda veniam aperiam! Rem, perferendis ut eligendi incidunt delectus modi quibusdam, earum odit iure blanditiis adipisci commodi. Velit at soluta amet corporis tenetur porro quos odio culpa vitae nobis officiis qui nulla id suscipit, ratione necessitatibus maxime?</p>
+        </div>
+        <div class="display-card" id="resourcing-sustainability">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nostrum aut nam reprehenderit aliquid labore veniam. Velit beatae necessitatibus quis at quasi itaque, amet aperiam adipisci facilis sunt suscipit dignissimos blanditiis laudantium perferendis praesentium vero, maxime obcaecati dolor odit porro architecto quaerat id perspiciatis rem. Dolor, aspernatur dolorem quibusdam nemo commodi eveniet beatae deserunt, maxime maiores consequatur eaque. Rerum quia reiciendis nesciunt corporis earum magnam, error delectus similique illo atque ratione ea aperiam sed laudantium, officiis voluptatibus beatae vel quo facere sapiente asperiores tempore veniam quae ullam! Consectetur delectus enim odit provident quis? Provident magnam dicta obcaecati delectus aspernatur iure?</p>
+        </div>
+    </section> -->
+</body>
+<!-- <script>
+    const food = document.querySelectorAll('.mission-content-image');
+    let index = 0;
+
+    console.log(food);
+
+    setInterval(changeFood(index),100)
+
+    function changeFood(index){
+        food[val].style.display=none;
+        val++;
+        if (val==3){
+            val=0;
+        }
+        food[index].style.display=block;
+    }
+</script> -->
+</html>

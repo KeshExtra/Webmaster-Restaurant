@@ -1,0 +1,290 @@
+*{
+    margin:0;
+    padding:0;
+    transition: cursor 0.2s ease;
+}
+a:visited{
+    color:inherit;
+    text-decoration: none;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+body{
+    /* cursor: url("Cursor.png"), crosshair; */
+    background-color: black;
+    color:white;
+    scrollbar-color: rgb(255, 255, 255);
+    height: 200vh;
+    overflow-x: hidden;
+}
+
+:root{
+    --font-family:'Brittany Signature';
+}
+
+@import url('https://fonts.cdnfonts.com/css/brittany-signature');
+                
+.nav-bar{
+    /* position:absolute;
+    top: 0;
+    left: 0;
+    right: 0; */
+    list-style-type: none;
+    display:flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top:10px;
+    /* margin-bottom:10rem; */
+}
+
+.option{
+    color:white;
+    order:1;
+    margin:0 5%;
+    font-family: 'Brittany Signature', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 10px white;
+    position:relative;
+    transition: cursor 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.option::before {
+    order:2;
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    aspect-ratio: 1;
+    background-image: url("Cursor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
+}
+
+.option:hover::before {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.option::after {
+    content: '';
+    position: absolute;
+    height: .8px;
+    left: -10%;
+    bottom: 0;
+    width: 0;
+    border-radius: 20%;
+    background-color: #ffffff; /* Adjust underline color */
+    box-shadow: 0 0 4px white;
+    transition: width 0.3s ease-in-out;
+}
+
+.option:hover::after {
+    width: 110%;
+}
+
+.option:hover{
+    cursor: pointer;
+}
+
+
+
+#second-last-option{
+    margin-right:auto;
+}
+#last-option{
+    margin-right:5%;
+}
+
+
+
+#logo{
+    /* height:100px; */
+    margin-left:5%;
+    margin-right:auto;
+}
+
+#logo-img{
+    margin: 0;
+    height:100px;
+    /* background-color: blue; */
+}
+
+/* end of nav-bar */
+
+.slideshow{
+    /* height: 100vh; */
+    /* background-color: gray; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome-logo{
+    width:20rem;
+    margin-top: 3%;
+}
+
+#welcome{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    margin-top:2%;
+    /* margin-bottom:40px; */
+    /* background-color: black; */
+}
+
+
+/* Welcome finished */
+
+#reviews-text{
+    margin-top:3%;
+}
+
+.review{
+    height:20rem;
+}
+
+#sliding-testimonial {
+    margin-top:3%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust as per your image height */
+}
+
+.sliders {
+    display: flex;
+    gap: 10px; /* Spacing between images */
+    animation: slide 20s linear infinite;
+}
+
+.review {
+    width: 200px; /* Adjust width of individual slides */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.review:hover {
+    transform: scale(1.2); /* Zoom in on hover */
+    filter: brightness(1.2); /* Highlight the image */
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Cloning effect for infinite looping */
+.sliders:after {
+    content: '';
+    flex: none;
+}
+
+.mission-content-image{
+    /* height:75vh; */
+    height: max(75vh);
+    animation: 30s linear endless-rotate infinite;
+    /* border:1px solid red; */
+    border-radius: 25vh;
+    overflow: hidden;
+}
+
+@keyframes endless-rotate {
+    0%{
+        rotate: 0deg;
+    }
+    25%{
+        rotate: 90deg;
+    }
+    50%{
+        rotate: 180deg;
+    }
+    75%{
+        rotate:270deg;
+    }
+    100%{
+        rotate:360deg;
+    }
+}
+
+#mission-title{
+    font-family: var(--font-family);
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.title{
+    font-family: var(--font-family);
+    font-size: 3.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px white;
+}
+
+#mission-section{
+    margin-top:3%;
+}
+#mission-content{
+    margin-top:3%;
+    display: flex;
+    align-items: center; /* Optional: Aligns items vertically */
+    gap: 20px;
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#mission-images{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    /* margin-l */
+    /* height:vh; */
+    /* width:50vw; */
+    /* background-color: white; */
+    overflow: hidden;
+    /* height:100vh; */
+    /* width:100%; */
+}
+
+#mission-text{
+    align-self: start;
+    margin-top:2%;
+    flex:1;
+    margin-right:5%;
+}
+
+#mission-text p{
+    text-justify: unset;
+}
+
+/* #resourcing-section{
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    padding-bottom: 5vh;
+    justify-content: center;
+    gap:20px;
+    width:90vw;
+    margin-top:5%;
+}
+
+.display-card{
+    
+} */
+
+footer{
+    margin-top:4%;
+    display: flex;
+}
