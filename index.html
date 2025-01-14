@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Webmaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">    
+</head>
+
+<body>
+    <script>
+
+        window.addEventListener('load', () => {
+            const sliders = document.querySelector('.sliders');
+
+            const cloneSlides = () => {
+                const slides = Array.from(sliders.children);
+                slides.forEach(slide => {
+                    const clone = slide.cloneNode(true);
+                    sliders.appendChild(clone);
+                });
+            };
+
+
+            const pauseSlider = () => {
+                sliders.style.animationPlayState = 'paused';
+            };
+
+            const resumeSlider = () => {
+                sliders.style.animationPlayState = 'running';
+            };
+
+
+            const initializeSlider = () => {
+                cloneSlides();
+                sliders.style.animation = 'slide 20s linear infinite';
+                sliders.addEventListener('mouseover', pauseSlider);
+                sliders.addEventListener('mouseout', resumeSlider);
+            };
+
+            initializeSlider();
+        });
+    </script>
+    <!-- <script>
+        let lastScrollPosition = 0;
+
+        window.addEventListener("scroll", function () {
+            const apple = document.getElementById("apple-one");
+            const grape = document.getElementById("grape-one");
+            const orange = document.getElementById("orange-one");
+            const vanilla = document.getElementById("vanilla-one");
+            const strawberry = document.getElementById("strawberry-one");
+            const movementFactor = 1; // Adjust for smoother/faster motion
+
+            // Retrieve the current 'bottom' value
+            let currentAppleBottom = parseFloat(apple.style.bottom) ||
+                parseFloat(window.getComputedStyle(apple).bottom) ||
+                0;
+            let currentGrapeBottom = parseFloat(grape.style.bottom) ||
+                parseFloat(window.getComputedStyle(grape).bottom) ||
+                0;
+            let currentOrangeBottom = parseFloat(orange.style.bottom) ||
+                parseFloat(window.getComputedStyle(orange).bottom) ||
+                0;
+            let currentVanillaBottom = parseFloat(vanilla.style.bottom) ||
+                parseFloat(window.getComputedStyle(vanilla).bottom) ||
+                0;
+            let currentStrawberryBottom = parseFloat(strawberry.style.bottom) ||
+                parseFloat(window.getComputedStyle(strawberry).bottom) ||
+                0;
+
+            const currentScrollPosition = window.scrollY;
+
+            const scrollDelta = currentScrollPosition - lastScrollPosition;
+
+            // Adjust the position based on the delta
+            const newAppleBottom = currentAppleBottom + scrollDelta * .75;
+            //const newGrapeBottom = currentGrapeBottom + scrollDelta * .25;
+            const newOrangeBottom = currentOrangeBottom + scrollDelta * 1;
+            const newVanillaBottom = currentVanillaBottom + scrollDelta * 1;
+            const newStrawberryBottom = currentStrawberryBottom + scrollDelta * 1;
+            // Set the new 'bottom' value with consistent units (e.g., 'px')
+            apple.style.bottom = `${newAppleBottom}px`;
+            //grape.style.bottom = `${newGrapeBottom}px`;
+            orange.style.bottom = `${newOrangeBottom}px`;
+            vanilla.style.bottom = `${newVanillaBottom}px`;
+            strawberry.style.bottom = `${newStrawberryBottom}px`;
+            
+            // Update the last scroll position
+            lastScrollPosition = currentScrollPosition;
+
+            // Debugging output
+            console.log(`Current Bottom: ${apple.style.bottom}, Delta: ${scrollDelta}`);
+        });
+    </script> -->
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-bar">
+            <li id="logo">
+                <a href=""><img src="Palette de dieu.png" id="logo-img"></a>
+            </li>
+            <li class="option">
+                <a href="menu.html">
+                    <p>Menu</p>
+                </a>
+            </li>
+            <li class="option">
+                <a href="legacy.html">
+                    <p>Legacy</p>
+                </a>
+            </li>
+            <li class="option" id="second-last-option">
+                <a href="reference.html">
+                    <p>Reference Page</p>
+                </a>
+            </li>
+            <li class="option" id="last-option">
+                <a href="login.html">
+                    <p>Sign In</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Top Part -->
+    <section id="top" class="slideshow">
+        <div id="welcome">
+            <p class="title">
+                Welcome To
+            </p>
+            <img src="Palette de dieu.png" id="welcome-logo">
+            <img src="floating food images/Food 1.png" class="strawberry floating-food-image" id="strawberry-one">
+            <img src="floating food images/Food 2.png" class="apple floating-food-image" id="apple-one">
+            <img src="floating food images/Food 3.png" class="grape floating-food-image" id="grape-one">
+            <img src="floating food images/Food 4.png" class="orange floating-food-image" id="orange-one">
+            <!-- <img src="floating food images/vecteezy_vanilla-flower-with-stick-illustration_23742314.png"
+                class="vanilla floating-food-image" id="vanilla-one"> -->
+            <img src="floating food images/vecteezy_red-tomato-illustration_23742409.png"
+                class="tomato floating-food-image" id="tomato-one">
+            <img src="floating food images/vecteezy_ai-generated-green-lettuce-isolated-on-transparent-background_36568587.png"
+                class="lettuce floating-food-image" id="lettuce-one">
+            <img src="floating food images/vecteezy_isolated-enoki-mushroom-cutout-on-white-background_9974110.png"
+                class="mushroom floating-food-image" id="mushroom-one">
+            <img src="floating food images/Food 6.png" class="chilli floating-food-image" id="chilli-one">
+        </div>
+    </section>
+
+    <!-- Sliding Reviews Part -->
+    <p class="title" id="reviews-text">
+        Average Rating<span style="display: block; margin-top:2%; color:white;">4.75/5</span>
+    </p>
+    <section id="sliding-testimonial">
+        <div class="sliders">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+            <img src="Add a little bit of body text.png" class="review">
+        </div>
+    </section>
+
+    <!-- Mission Part -->
+    <section id="mission-section">
+        <p class="title">
+            Our Mission
+        </p>
+        <div id="mission-content">
+            <div id="mission-images">
+                <!-- <img class="mission-content-image" src="vecteezy_ai-generated-creamy-chicken-alfredo-pasta-bow-on-transparent_36498052.png"> -->
+                <!-- <img src="vecteezy_ai-generated-pork-teriyaki-japanese-food-on-a-transparent_36512714.png" class="mission-content-image">-->
+                <img src="vecteezy_food-food-salad-sarah-vegetables_25107390.png" class="mission-content-image">
+            </div>
+            <div id="mission-text">
+                <p>
+                    Palette De Dieu is more than a restaurant, it's a journey of culinary history with an earthly
+                    intervention. Driven by our belief in the bonding nature of traditional cuisines and the grounding
+                    nature of vegetarian meals, we strive to provide an exquisite catering and dining experience filled
+                    with dishes from around the globe curated using the finest traditionally grown ingredients. Our
+                    mission is to bring people together through heritage-inspired flavors that evoke feelings of
+                    connectivity.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- <footer>
+       <ul>
+            <li>Address</li>
+            <li>
+            </li>
+        </ul>
+    </footer> -->
+    <!-- <section id="resourcing-section">
+        <div class="display-card" id="resourcing-method">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, debitis quis. Repellendus tenetur blanditiis porro. Quidem delectus quam accusantium tempora excepturi provident at ut molestiae consequatur voluptatum reiciendis, repellat natus officiis maiores iure. Error facilis omnis dolorum iste sed ab eaque obcaecati at quaerat magnam. Adipisci id vero porro placeat sint voluptatibus minima aliquid eos debitis cupiditate autem, est, aspernatur excepturi unde dolor assumenda veniam aperiam! Rem, perferendis ut eligendi incidunt delectus modi quibusdam, earum odit iure blanditiis adipisci commodi. Velit at soluta amet corporis tenetur porro quos odio culpa vitae nobis officiis qui nulla id suscipit, ratione necessitatibus maxime?</p>
+        </div>
+        <div class="display-card" id="resourcing-sustainability">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nostrum aut nam reprehenderit aliquid labore veniam. Velit beatae necessitatibus quis at quasi itaque, amet aperiam adipisci facilis sunt suscipit dignissimos blanditiis laudantium perferendis praesentium vero, maxime obcaecati dolor odit porro architecto quaerat id perspiciatis rem. Dolor, aspernatur dolorem quibusdam nemo commodi eveniet beatae deserunt, maxime maiores consequatur eaque. Rerum quia reiciendis nesciunt corporis earum magnam, error delectus similique illo atque ratione ea aperiam sed laudantium, officiis voluptatibus beatae vel quo facere sapiente asperiores tempore veniam quae ullam! Consectetur delectus enim odit provident quis? Provident magnam dicta obcaecati delectus aspernatur iure?</p>
+        </div>
+    </section> -->
+</body>
+<!-- <script>
+    const food = document.querySelectorAll('.mission-content-image');
+    let index = 0;
+
+    console.log(food);
+
+    setInterval(changeFood(index),100)
+
+    function changeFood(index){
+        food[val].style.display=none;
+        val++;
+        if (val==3){
+            val=0;
+        }
+        food[index].style.display=block;
+    }
+</script> -->
+
+</html>

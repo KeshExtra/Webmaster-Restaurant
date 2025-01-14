@@ -1,0 +1,100 @@
+/* 
+
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background-color: black;
+    padding:5%;
+    border-radius: 5%;
+    background-color: lightblue;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    flex-direction: column;
+    gap:4vh;
+}
+
+.text-section{
+    display: flex;
+    flex-direction: column;
+} */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+h1{
+    font-family: 'Luxurious Roman';
+    color:beige;
+}
+#bg-vid{
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    right:0;
+    object-fit: cover;
+    object-position: 0% -10%;
+    height:100vh;
+    width: 70vw;
+}
+
+#wrapper{
+    background-color: #03051b;
+    overflow: hidden;
+    /* padding: 20px; */
+    /* background-color: rgb(255, 255, 255); */
+    /* border-radius: 0px 20px 20px 0px; */
+    z-index:2;
+    /* box-sizing:content-box; */
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    height:100vh;
+    width:40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    /* background-color: white; */
+}
+
+.text-section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.text-section>label{
+    color:white;
+}
+.text-section>input{
+    width: 30vw;
+    height: 2.5rem;
+    border:solid 1px;
+    border-radius: 10px;
+    padding-left:5px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+button{
+    /* height:2rem; */
+    color:white;
+    padding: 15px 30px;
+    border:solid 2px white;
+    border-radius: 25px;
+    background-color: transparent;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
